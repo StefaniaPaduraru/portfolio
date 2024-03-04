@@ -1,25 +1,34 @@
-import React from "react";
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import './NavBar.scss';
+import React, { useState } from "react";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import "./NavBar.scss";
 
-function NavBar(){
-return (
+function NavBar() {
+  return (
     <>
-    <Navbar>
-        <Container>
-           {/* <Navbar.Brand href="#home"><img src="logo.png" alt="logo"/></Navbar.Brand>*/}
-          <Nav className="me-auto">
-          <Nav.Link href="#about">About me</Nav.Link>
-            <Nav.Link href="#projects">Projects</Nav.Link>
-            <Nav.Link href="#skills">Skills</Nav.Link>
-            <Nav.Link href="#contact">Contact</Nav.Link>
+      <Navbar fixed="bottom" className="mx-auto">
+        <Container className="justify-content-center">
+          <Nav className="m-auto">
+            <Nav.Item>
+              <Nav.Link href="#about">About me</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="#projects">Projects</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="#skills">Skills</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="#contact">Contact</Nav.Link>
+            </Nav.Item>
           </Nav>
         </Container>
       </Navbar>
+      
+
     </>
-);
+  );
 }
 
 export default NavBar;

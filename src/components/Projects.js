@@ -21,14 +21,14 @@ function Projects(){
         <section id="projects">
         <Container fluid="md">
             <Row>
-                <Col md={{ span: 4 }}><SingleProject link={"https://stefaniapaduraru.github.io/focusify/"} src={"./resources/focusify.png"} title={"Focusify"}/></Col>
-                <Col md={{ span: 4 }}><SingleProject link={"https://stefaniapaduraru.github.io/magic-memory/"} src={"./resources/focusify.png"} title={"Magic Memory Game"}/></Col>
-                <Col md={{ span: 4 }}><SingleProject link={"https://stefaniapaduraru.github.io/calories-counter.github.io/"} src={"./resources/focusify.png"} title={"Calories Counter"}/></Col>
+                <Col><SingleProject link={"https://stefaniapaduraru.github.io/focusify/"} src={"./resources/focusify.png"} title={"Focusify"}/></Col>
+                <Col><SingleProject link={"https://stefaniapaduraru.github.io/magic-memory/"} src={"./resources/focusify.png"} title={"Magic Memory Game"}/></Col>
+                <Col><SingleProject link={"https://stefaniapaduraru.github.io/calories-counter.github.io/"} src={"./resources/focusify.png"} title={"Calories Counter"}/></Col>
             </Row>
             <Row >
-                <Col md={{ span: 4 }}><SingleProject link={"https://github.com/StefaniaPaduraru/quotes-generator"} src={"./resources/focusify.png"} title={"Quotes Generator"}/></Col>
-                <Col md={{ span: 4 }}><SingleProject link={"https://stefaniapaduraru.github.io/task-manager.github.io/"} src={"./resources/focusify.png"} title={"Task Manager"}/></Col>
-                <Col md={{ span: 4 }}><SingleProject link={"https://stefaniapaduraru.github.io/magic-memory/"} src={"./resources/focusify.png"} title={"Letter B"}/></Col>
+                <Col><SingleProject link={"https://github.com/StefaniaPaduraru/quotes-generator"} src={"./resources/focusify.png"} title={"Quotes Generator"}/></Col>
+                <Col><SingleProject link={"https://stefaniapaduraru.github.io/task-manager.github.io/"} src={"./resources/focusify.png"} title={"Task Manager"}/></Col>
+                <Col><SingleProject link={"https://stefaniapaduraru.github.io/magic-memory/"} src={"./resources/focusify.png"} title={"Letter B"}/></Col>
             </Row>
     </Container>
         </section>

@@ -1,10 +1,20 @@
 #projects{
     height: 100vh;
-    padding: 0px 10vw;
+    padding: 0vw 10vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: rgb(100, 88, 73);
+}
+
+@media (min-width: 1160px){
+    #projects{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        padding: 5vh 0;
+    }
 }
 
 @media (max-width: 767px){
@@ -17,7 +27,6 @@
 #project{
     border: 1px solid black;
     border-radius: 10px;
-    ///background-image: url("https://www.codester.com/static/uploads/items/000/047/47167/icon.png");
     padding:20px;
     display:flex;
     flex-direction: column;

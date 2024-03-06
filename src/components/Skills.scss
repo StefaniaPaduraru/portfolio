@@ -1,0 +1,37 @@
+#skills {
+    height: 30vh;
+    padding: 0px 0vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(224, 210, 210, 0.726);
+    overflow: hidden;
+}
+.skills-component{
+    text-align: center;
+    font-weight: 500;
+    font-size: larger;
+}
+.skills-container {
+    display: flex;
+    justify-content: center;
+    //animation: moveTicker 20s linear infinite;
+    animation-play-state: running;
+    animation-delay: 0s;
+    min-width: 100%;
+}
+
+@keyframes moveTicker {
+    0% {
+        transform: translateX(100%);
+        
+    }
+    100% {
+        transform: translateX(-100%); 
+    }
+}
+
+.skills-container > * {
+    margin-right: 70px; 
+}
+

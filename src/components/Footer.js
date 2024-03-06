@@ -5,7 +5,7 @@ function Footer(){
     const continent = 'EU';
     return(
         <>
-        <p>Location: {country}, {continent}</p>
+        <p style={{textAlign: 'center'}}> {country}, {continent}</p>
         </>
     );
 }

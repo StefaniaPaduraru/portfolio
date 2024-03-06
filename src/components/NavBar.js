@@ -11,7 +11,7 @@ function NavBar() {
         <Container className="justify-content-center">
           <Nav className="m-auto">
             <Nav.Item>
-              <Nav.Link href="#about">About me</Nav.Link>
+              <Nav.Link href="#about-me">About me</Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link href="#projects">Projects</Nav.Link>

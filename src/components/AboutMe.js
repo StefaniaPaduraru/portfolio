@@ -66,14 +66,15 @@ function AboutMe() {
         </Offcanvas>
       </section>
       <section id="about-me">
-        <h1>Hi there, I'm Ștefania Păduraru!</h1>
-        <h3>
+        <h1>I'm Ștefania Păduraru</h1>
+        <h2>
           Aspiring front-end developer with a passion for creating delightful
-          web experiences.
-        </h3>
+          web experiences
+        </h2>
+        <hr/>
         <h5>
           Self-taught enthusiast on a journey to master the art of crafting
-          minimalistic, responsive, and accessible websites.
+          minimalistic, responsive, and accessible websites
         </h5>
       </section>
     </>

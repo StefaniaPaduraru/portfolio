@@ -7,14 +7,17 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.3.3",
+    "jquery": "^3.7.1",
     "mdb-react-ui-kit": "^7.2.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.1",
     "react-dom": "^18.2.0",
+    "react-fast-marquee": "^1.6.4",
     "react-router-dom": "^6.22.2",
     "react-scripts": "5.0.1",
     "sass": "^1.71.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "webticker": "^3.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

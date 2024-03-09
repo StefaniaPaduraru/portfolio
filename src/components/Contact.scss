@@ -1,7 +1,20 @@
+$contactBackgroundColor:#ebcdc1dd;
+
 #contact{
-    height: 50vh;
-    padding: 0px 10vw;
+    padding: 10vh 10vw;
     display: flex;
+    justify-content: space-between;
+    background-color: $contactBackgroundColor;
+    word-break: break-all;
+}
+
+#contact h1{
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+}
+.social-links{
+    display:flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
 }

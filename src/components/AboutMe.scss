@@ -1,67 +1,174 @@
-#about-me{
-    height: 100vh;
-    padding: 0px 10vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: bisque;
+//colors
+$nameColor: #9f131384;
+$backgroundColor: #ebc1c2bf;
+
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@300..700&display=swap");
+
+#about-me {
+  height: 100vh;
+  padding: 10vh 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url(../resources/so-white.png);
+}
+#titles {
+  min-height: max-content;
+  text-align: center;
+  padding: 3rem;
+  background-color: $backgroundColor;
+  border-radius: 6rem 5rem 6rem 0.5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
-#about-me h1{
-    font-weight: 700;
-    text-align: center;
-    padding:10px 0px;
+#titles h1 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  margin: 10px 0;
+  overflow: hidden;
+  border-right: 2px solid rgba(0, 0, 0, 0.842);
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typing 3s steps(40, end) forwards, blink 0.8s infinite;
 }
-#about-me h2,
+@keyframes blink {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: $nameColor;
+  }
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 550px;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 915px) {
+  #titles h1 {
+    white-space: pre-wrap;
+    animation: typing 3s steps(25, end) forwards, blink 0.8s infinite;
+  }
+  @keyframes typing {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  @keyframes blink {
+    from {
+      border-color: transparent;
+    }
+    to {
+      border-color: $nameColor;
+    }
+  }
+  #about-me {
+    margin: 10px;
+    padding: 0px;
+  }
+}
+
+#about-me h3 {
+  font-weight: 300;
+  margin-top: 30px;
+  padding: 10px 0px;
+  animation: fadeInUp 3s ease forwards;
+}
 #about-me h5 {
-    padding:10px 0px;
-    text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 300;
+  padding: 10px 0px;
+  animation: fadeInDown 3s ease forwards;
 }
-.header{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    padding:10px 30px;
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  background-color: #ffffff93;
+  position: fixed;
+  top:0px;
+  width: 100%;
 }
 @media (min-width: 570px) {
-    .button-offcanvas {
-      visibility: hidden;
-      transform: translateX(-100%);
-    }
+  .button-offcanvas {
+    visibility: hidden;
+    transform: translateX(-100%);
   }
-  .container {
-    display: inline-block;
-    cursor: pointer;
-  }
-  
-  .bar1, .bar2, .bar3 {
-    width: 20px;
-    height: 2px;
-    background-color: #fff;
-    margin: 5px 1px;
-    transition: 0.4s;
-  }
-  
-  .change .bar1 {
-    transform: translate(0, 7px) rotate(-45deg);
-  }
-  
-  .change .bar2 {opacity: 0;}
-  
-  .change .bar3 {
-    transform: translate(0, -7px) rotate(45deg);
-  }
- 
-.nav{
-    padding-top:50px;
-    font-size: larger;
+}
+.container {
+  display: inline-block;
+  cursor: pointer;
 }
 
-.nav-link {
-    border-radius:50px;
+.bar1,
+.bar2,
+.bar3 {
+  width: 20px;
+  height: 2px;
+  background-color: $nameColor;
+  margin: 5px 1px;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 7px) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translate(0, -7px) rotate(45deg);
+}
+
+.nav {
+  padding-top: 50px;
+  font-size: larger;
+  .nav-link {
+    border-radius: 50px;
     margin: 15px 1px;
+    color: black;
+    background-color: #d6afafc2;
     &:hover {
-    background-color: #ddd;
-    border-radius:50px;
+      background-color: #ddd;
+      border-radius: 50px;
+      color: black;
     }
+  }
+}
+#logo {
+  background-color: transparent;
+  border: transparent;
 }

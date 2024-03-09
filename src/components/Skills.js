@@ -6,7 +6,7 @@ import Marquee from "react-fast-marquee";
 function Skills({ direction = "right", speed = 60 }) {
   return (
     <section id="skills">
-      <hr />
+      <hr style={{ color: "#14591D" }} />
       <Container fluid className="skills-container marquee-container">
         <Marquee direction={direction} speed={speed}>
           <p className="skills-component">
@@ -40,7 +40,7 @@ function Skills({ direction = "right", speed = 60 }) {
         </Marquee>
       </Container>
 
-      <hr />
+      <hr style={{ color: "#14591D" }} />
     </section>
   );
 }

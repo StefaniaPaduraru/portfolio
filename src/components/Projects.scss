@@ -1,54 +1,112 @@
-#projects{
-    height: 100vh;
-    padding: 0vw 10vw;
+$backgroundProjects: #afc1d6;
+$boxShadowColor: #14457ea9;
+$boxShadow: $boxShadowColor -5px 5px 20px -15px;
+
+#projects {
+  height: 100vh;
+  padding: 0vw 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $backgroundProjects;
+}
+#visit-project {
+  background-color: $backgroundProjects;
+  padding: 0.5rem 1rem;
+  color: black;
+  box-shadow: $boxShadow;
+  &:hover {
+    animation: shake 0.5s both;
+  }
+}
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0eg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+#visit-project a {
+  color: black;
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+@media (min-width: 1160px) {
+  #projects {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgb(100, 88, 73);
-}
-
-@media (min-width: 1160px){
-    #projects{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: auto;
-        padding: 5vh 0;
-    }
-}
-
-@media (max-width: 767px){
-    #projects{
-        height: auto;
-        padding: 5vh 10vw;
-    }
-}
-
-#project{
-    border: 1px solid black;
-    border-radius: 10px;
-    padding:20px;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom:20px;
-}
-#image-project{
-    border: 1px solid black;
-    margin-top:10px;
-    border-radius: 10px;
-    width: 100%;
     height: auto;
+    padding: 10vh 0;
+  }
 }
-.container-md{
-   
-    
+
+@media (max-width: 1050px) {
+  #projects {
+    height: auto;
+    padding: 5vh 10vw;
+  }
+  #visit-project a {
+    display: none;
+  }
+  #visit-project {
+    padding: 0.5rem 1rem;
+    color: black;
+    box-shadow: $boxShadow;
+    min-width: 0px;
+  }
 }
-#project-header{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    width:100%;
-    height: 5vh;
+
+#project {
+  border-radius: 1.5rem;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  background-image: url("../../src/resources/so-white.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: $boxShadowColor -10px 10px 20px -15px,
+    $boxShadowColor 10px 10px 20px -15px;
+  &:hover {
+    animation: zoomIn 2s ease;
+  }
+}
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+#image-project {
+  margin-top: 20px;
+  border-radius: 0.5rem;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  box-shadow: $boxShadow;
+}
+
+#project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 5vh;
 }

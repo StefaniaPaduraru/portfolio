@@ -1,8 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./AboutMe.scss";
 import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Nav from "react-bootstrap/Nav";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import Footer from './Footer';
+import { OffcanvasHeader } from "react-bootstrap";
 
 function AboutMe() {
   const date = new Date();
@@ -12,7 +17,7 @@ function AboutMe() {
     minute: "numeric",
     timeZoneName: "short",
   };
-
+  
   const formattedDate = date.toLocaleDateString("en-US", options);
 
   const [showOffcanvas, setShowOffcanvas] = useState(false);
@@ -26,56 +31,80 @@ function AboutMe() {
   const handleMenuClick = () => {
     setMenuOpen(!isMenuOpen);
   };
+  const circleRef = useRef(null);
+
+  gsap.registerPlugin(ScrollToPlugin);
+  const navigationRef = useRef();
+  const { contextSafe } = useGSAP({scope: navigationRef});
+  const scrollToSection = contextSafe((e) => {
+    gsap.to(window, {
+        duration: 1.2,
+        scrollTo: e
+    });
+  });
   return (
     <>
       <section className="header">
-        <img src="logo.png" alt="logo" />
+        <Button id="logo" onClick={() => scrollToSection("#about-me")}>
+          <img src="logo.png" alt="logo" />
+        </Button>
         <p id="current-date"> {formattedDate}</p>
         <Button
-          variant="dark"
+          variant="light"
           className="button-offcanvas"
           onClick={toggleOffcanvas}
         >
-          <div className={`container ${isMenuOpen ? 'change' : ''}`} onClick={handleMenuClick}>
+          <div
+            className={`container ${isMenuOpen ? "change" : ""}`}
+            onClick={handleMenuClick}
+          >
             <div className="bar1"></div>
             <div className="bar2"></div>
             <div className="bar3"></div>
-        </div>
+          </div>
         </Button>
         <Offcanvas
           show={showOffcanvas}
           onHide={toggleOffcanvas}
           placement="end"
         >
+          <OffcanvasHeader>
+          <Button id="logo" onClick={() => scrollToSection("#about-me")}>
+          <img src="logo.png" alt="logo" />
+        </Button>
+          </OffcanvasHeader>
           <Offcanvas.Body>
-          <Nav className="flex-column">
+            <Nav className="flex-column">
             <Nav.Item>
-              <Nav.Link href="#about">About me</Nav.Link>
+              <Nav.Link onClick={() => scrollToSection("#about-me")}>About me 👤</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="#projects">Projects</Nav.Link>
+              <Nav.Link onClick={() => scrollToSection("#projects")}>Projects 🗂️</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="#skills">Skills</Nav.Link>
+              <Nav.Link onClick={() => scrollToSection("#skills")}>Skills 🛠️</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="#contact">Contact</Nav.Link>
+              <Nav.Link onClick={() => scrollToSection("#contact")}>Contact 📩</Nav.Link>
             </Nav.Item>
-          </Nav>
+            </Nav>
           </Offcanvas.Body>
+          <Footer />
         </Offcanvas>
       </section>
       <section id="about-me">
-        <h1>I'm Ștefania Păduraru</h1>
-        <h2>
-          Aspiring front-end developer with a passion for creating delightful
+        <div ref={circleRef} id="titles">
+        <h1>ȘTEFANIA PĂDURARU</h1>
+        <h3>
+          I'm an aspiring front-end developer with a passion for creating delightful
           web experiences
-        </h2>
-        <hr/>
+        </h3>
+        <hr />
         <h5>
           Self-taught enthusiast on a journey to master the art of crafting
-          minimalistic, responsive, and accessible websites
+          minimalistic, responsive, and accessible websites  ~
         </h5>
+        </div>
       </section>
     </>
   );

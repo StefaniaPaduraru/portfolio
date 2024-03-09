@@ -1,23 +1,23 @@
 .navbar {
-    font-weight: 500;
-    font-size: larger;
-    border-radius:50px;
-    margin-bottom:4%;
-    width:550px;
-    .nav-link {
-      border-radius:50px;
-      margin: 1px 15px;
-      &:hover {
-        background-color: #ddd;
-        border-radius:50px;
-      }
+  font-weight: 500;
+  font-size: larger;
+  border-radius: 50px;
+  margin-bottom: 40px;
+  background-color: #ffffff93;
+  box-shadow: #14457ea9 2px 5px 20px -15px, #14457ea9 -2px 5px 20px -15px;
+  width: 550px;
+  .nav-link {
+    border-radius: 50px;
+    margin: 1px 15px;
+    &:hover {
+      background-color: #ddd;
+      border-radius: 50px;
     }
   }
-  @media (max-width: 570px) {
-    .navbar {
-      visibility: hidden;
-      transform: translateX(100%);
-    }
+}
+@media (max-width: 570px) {
+  .navbar {
+    visibility: hidden;
+    transform: translateX(100%);
   }
-
-//570
+}

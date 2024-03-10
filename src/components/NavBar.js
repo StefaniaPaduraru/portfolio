@@ -19,8 +19,13 @@ function NavBar() {
   });
   return (
     <>
+    <div id="scroll">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="mb-2"><rect x="0.5" y="1.5" width="15" height="21" rx="7.5" stroke="currentColor"></rect><line x1="8.5" y1="5" x2="8.5" y2="10" stroke="currentColor"></line></svg>
+          <p>Scroll down</p>
+        </div>
       <Navbar fixed="bottom" className="mx-auto">
         <Container className="justify-content-center">
+          
           <Nav className="m-auto">
             <Nav.Item>
               <Nav.Link onClick={() => scrollToSection("#about-me")}>

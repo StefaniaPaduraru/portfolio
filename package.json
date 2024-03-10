@@ -1,6 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
+  "homepage": "https://stefaniapaduraru.github.io/portfolio/",
   "private": true,
   "dependencies": {
     "@gsap/react": "^2.1.0",
@@ -13,20 +14,21 @@
     "gsap": "^3.12.5",
     "jquery": "^3.7.1",
     "mdb-react-ui-kit": "^7.2.0",
+    "postcss": "^8.4.35",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.1",
     "react-dom": "^18.2.0",
     "react-fast-marquee": "^1.6.4",
     "react-router-dom": "^6.22.2",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "sass": "^1.71.1",
     "web-vitals": "^2.1.4",
     "webticker": "^3.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

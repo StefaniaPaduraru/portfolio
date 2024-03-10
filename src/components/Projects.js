@@ -11,8 +11,11 @@ function SingleProject({ link, src, title }) {
           <Button
             className="rounded-pill border-0 border-white"
             id="visit-project"
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <a href={link} target="_blank" rel="noopener noreferrer">
+            <a>
               Visit
             </a>
             <svg
@@ -84,7 +87,7 @@ function Projects() {
           </Col>
           <Col>
             <SingleProject
-              link={"https://stefaniapaduraru.github.io/magic-memory/"}
+              link={"https://github.com/StefaniaPaduraru/LetterB"}
               src={"./resources/6.jpg"}
               title={"Letter B"}
             />

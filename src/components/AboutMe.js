@@ -67,6 +67,7 @@ function AboutMe() {
           show={showOffcanvas}
           onHide={toggleOffcanvas}
           placement="end"
+          style={{width: "60%"}}
         >
           <OffcanvasHeader>
           <Button id="logo" onClick={() => scrollToSection("#about-me")}>
@@ -93,17 +94,19 @@ function AboutMe() {
         </Offcanvas>
       </section>
       <section id="about-me">
-        <div ref={circleRef} id="titles">
-        <h1>ȘTEFANIA PĂDURARU</h1>
-        <h3>
-          I'm an aspiring front-end developer with a passion for creating delightful
-          web experiences
-        </h3>
-        <hr />
-        <h5>
-          Self-taught enthusiast on a journey to master the art of crafting
-          minimalistic, responsive, and accessible websites  ~
-        </h5>
+        <div >
+          <div ref={circleRef} id="titles">
+          <h1>ȘTEFANIA PĂDURARU</h1>
+          <h3>
+            I'm an aspiring front-end developer with a passion for creating delightful
+            web experiences
+          </h3>
+          <hr />
+          <h5>
+            Self-taught enthusiast on a journey to master the art of crafting
+            minimalistic, responsive, and accessible websites  ~
+          </h5>
+          </div>
         </div>
       </section>
     </>

@@ -71,7 +71,7 @@ function Projects() {
         <Row>
           <Col>
             <SingleProject
-              link={"https://github.com/StefaniaPaduraru/quotes-generator"}
+              link={"https://stefaniapaduraru.github.io/quotes-generator/"}
               src={"./resources/1.jpg"}
               title={"Quotes Generator"}
             />

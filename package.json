@@ -1,7 +1,6 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "homepage": "https://stefaniapaduraru.github.io/portfolio/",
   "private": true,
   "dependencies": {
     "@gsap/react": "^2.1.0",
@@ -10,6 +9,7 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "autoprefixer": "^9.0.0",
     "bootstrap": "^5.3.3",
     "gsap": "^3.12.5",
     "jquery": "^3.7.1",
@@ -26,9 +26,9 @@
     "webticker": "^3.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

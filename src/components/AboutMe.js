@@ -104,7 +104,7 @@ function AboutMe() {
           <hr />
           <h5>
             Self-taught enthusiast on a journey to master the art of crafting
-            minimalistic, responsive, and accessible websites  ~
+            minimalistic, responsive, and accessible websites
           </h5>
           </div>
         </div>

@@ -15,9 +15,7 @@ function SingleProject({ link, src, title }) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <a>
               Visit
-            </a>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -41,7 +39,8 @@ function SingleProject({ link, src, title }) {
 
 function Projects() {
   return (
-    <section id="projects">
+    <section id="projects"> 
+    <h2 id="title">Projects</h2>
       <Container fluid="md">
         <Row>
           <Col>

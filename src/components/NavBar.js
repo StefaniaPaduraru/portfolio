@@ -6,6 +6,7 @@ import "./NavBar.scss";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { Button } from "react-bootstrap";
 
 function NavBar() {
   gsap.registerPlugin(ScrollToPlugin);
@@ -50,6 +51,7 @@ function NavBar() {
           </Nav>
         </Container>
       </Navbar>
+      <Button onClick={() => window.scrollTo(0, 0)} id="up-button">⬆</Button>
     </>
   );
 }

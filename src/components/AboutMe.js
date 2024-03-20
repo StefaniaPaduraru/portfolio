@@ -76,17 +76,17 @@ function AboutMe() {
           </OffcanvasHeader>
           <Offcanvas.Body>
             <Nav className="flex-column">
-            <Nav.Item>
-              <Nav.Link onClick={() => scrollToSection("#about-me")}>About me 👤</Nav.Link>
+            <Nav.Item >
+            <Nav.Link onClick={() => {scrollToSection("#about-me"); toggleOffcanvas();}}>About me 👤</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link onClick={() => scrollToSection("#projects")}>Projects 🗂️</Nav.Link>
+            <Nav.Link onClick={() => {scrollToSection("#projects"); toggleOffcanvas();}}>Projects 🗂️</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link onClick={() => scrollToSection("#skills")}>Skills 🛠️</Nav.Link>
+            <Nav.Link onClick={() => {scrollToSection("#skills"); toggleOffcanvas();}}>Skills 🛠️</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link onClick={() => scrollToSection("#contact")}>Contact 📩</Nav.Link>
+            <Nav.Link onClick={() => {scrollToSection("#contact"); toggleOffcanvas();}}>Contact 📩</Nav.Link>
             </Nav.Item>
             </Nav>
           </Offcanvas.Body>

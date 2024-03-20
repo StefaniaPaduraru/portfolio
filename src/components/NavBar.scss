@@ -28,3 +28,19 @@
   position:absolute;
   left:10px;
 }
+#up-button{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #afc1d6;
+  color: black;
+  cursor: pointer;
+  border-radius: 50%;
+  &:hover {
+    background-color: #ddd;
+    color: black;
+  }
+}
